@@ -4,92 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OZARK Crypto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0b0b;
+      color: #eaeaea;
     }
     header {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
+      background: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
     }
     nav a {
-      color: #00eaff;
+      color: #eaeaea;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
     .hero {
-      background: url('https://raw.githubusercontent.com/yourusername/ozarkcrypto/main/logo.jpg') no-repeat center center/cover;
-      height: 90vh;
+      background: url('logo.jpg') center/cover no-repeat;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-shadow: 2px 2px 10px #000;
+      text-shadow: 0 0 20px #000;
+      text-align: center;
     }
     .hero h1 {
-      font-size: 4rem;
-      color: #00eaff;
+      font-size: 60px;
+      color: #c0f;
     }
     .section {
-      padding: 60px 20px;
-      text-align: center;
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
     iframe {
-      border: none;
       width: 100%;
-      max-width: 500px;
       height: 600px;
+      border: none;
+    }
+    .crypto-prices {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .crypto-prices iframe {
+      flex: 1;
+      min-width: 300px;
+      height: 500px;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      background: #111;
+      border: 1px solid #555;
+      color: #fff;
+      border-radius: 8px;
+    }
+    form button {
+      background: #c0f;
+      border: none;
+      padding: 12px 20px;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
     }
     footer {
-      background-color: #111;
-      padding: 20px;
       text-align: center;
-      font-size: 0.9em;
+      padding: 20px;
+      background: #111;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.jpg" alt="OZARK Logo">
     <nav>
       <a href="#exchange">Обмен</a>
+      <a href="#prices">Курсы</a>
       <a href="#faq">FAQ</a>
-      <a href="#support">Поддержка</a>
+      <a href="#contact">Контакты</a>
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>OZARK CRYPTO</h1>
-  </div>
-
-  <section class="section" id="exchange">
-    <h2>Быстрый обмен криптовалюты</h2>
-    <p>Покупай Bitcoin, USDT, Ethereum с карты или Apple Pay</p>
-    <iframe 
-      src="https://widget.onramper.com?apiKey=demo-api-key&defaultCrypto=USDT&isFeeIncluded=true"
-      allow="accelerometer; autoplay; camera; gyroscope; payment">
-    </iframe>
+  <section class="hero">
+    <h1>Добро пожаловать в OZARK CRYPTO</h1>
   </section>
 
-  <section class="section" id="faq">
-    <h2>Часто задаваемые вопросы</h2>
-    <p><strong>Нужен ли паспорт?</strong><br> До $1000 — не нужен</p>
-    <p><strong>Сколько занимает?</strong><br> 2-10 минут в среднем</p>
-    <p><strong>Какие способы оплаты?</strong><br> Банковская карта, Google Pay, Apple Pay</p>
+  <section id="exchange" class="section">
+    <h2>Мгновенный обмен криптовалюты</h2>
+    <iframe src="https://widget.onramper.com?color=120F2F&apiKey=demo&isAddressEditable=true&defaultAddNetwork=ethereum&defaultCrypto=ETH&defaultAmount=100&defaultFiat=USD&isFiatAmountEditable=true&darkMode=true&supportSwap=false&fee=0.4"></iframe>
   </section>
 
-  <section class="section" id="support">
-    <h2>Поддержка</h2>
-    <p>Напиши нам в <a href="https://t.me/ozark_support" style="color:#00eaff;">Telegram</a></p>
+  <section id="prices" class="section">
+    <h2>Курсы криптовалют</h2>
+    <div class="crypto-prices">
+      <iframe src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget?coin_ids=bitcoin,ethereum,tether&currency=usd"></iframe>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2>FAQ</h2>
+    <p><strong>Нужно ли проходить верификацию?</strong> Нет, до $1000 — без KYC (в зависимости от агрегатора).</p>
+    <p><strong>Какая комиссия?</strong> 40% уже включено в стоимость.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>О компании и Контакты</h2>
+    <p>OZARK Crypto — ваш премиальный криптообменник. Работаем через агрегаторы: Onramper, Mercuryo, Transak, PayPal.</p>
+    <form>
+      <input type="text" placeholder="Ваше имя или ник" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Сообщение"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
   </section>
 
   <footer>
-    &copy; 2025 OzarkCrypto. Все права защищены.
+    © 2025 OZARK Crypto. Все права защищены.
   </footer>
 </body>
 </html>
