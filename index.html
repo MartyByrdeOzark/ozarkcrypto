@@ -2,80 +2,94 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OzarkCrypto — покупка и обмен криптовалют</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OZARK Crypto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #0f0f1b;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0d0d0d;
       color: #fff;
-      margin: 0;
-      padding: 0;
+      line-height: 1.6;
     }
     header {
-      background: #1c1c2d;
+      background-color: #111;
       padding: 20px;
       text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
     }
-    .container {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
+    nav a {
+      color: #00eaff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://raw.githubusercontent.com/yourusername/ozarkcrypto/main/logo.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 10px #000;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      color: #00eaff;
     }
     .section {
-      background: #1e1e2e;
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 12px rgba(255,255,255,0.05);
-    }
-    h2 {
-      margin-top: 0;
-      font-size: 22px;
+      padding: 60px 20px;
+      text-align: center;
     }
     iframe {
-      width: 100%;
-      height: 600px;
       border: none;
-      margin-top: 20px;
-      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      height: 600px;
     }
-    .note {
-      font-size: 14px;
-      color: #aaa;
-      margin-top: 12px;
-    }
-    @media(max-width: 600px) {
-      iframe {
-        height: 450px;
-      }
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <header>OzarkCrypto — покупка и обмен криптовалют</header>
-  <div class="container">
-    <div class="section">
-      <h2>1. Купить криптовалюту до $300 (без верификации)</h2>
-      <p>Через Mercuryo. Просто введите данные карты и адрес кошелька.</p>
-      <iframe src="https://widget.mercuryo.io/?merchantId=demo&fiatCurrency=USD&cryptoCurrency=BTC"></iframe>
-      <p class="note">Верификация не требуется до лимита. Карта должна быть на ваше имя.</p>
-    </div>
-    <div class="section">
-      <h2>2. Купить криптовалюту до $1000 (без паспорта)</h2>
-      <p>Платёж через Transak. Поддержка банковских переводов и большего объёма.</p>
-      <iframe src="https://global.transak.com?apiKey=demo"></iframe>
-      <p class="note">Паспорт может понадобиться при превышении лимита. Лучше заранее указать телефон и email.</p>
-    </div>
-    <div class="section">
-      <h2>3. Обмен криптовалюты без карты (и без паспорта)</h2>
-      <p>Обмен крипты на крипту через ChangeNOW. Без регистрации и KYC.</p>
-      <iframe src="https://changenow.io/embeds/exchange-widget/v2?from=btc&to=usdt&amount=1&link_id=demo" height="440px"></iframe>
-      <p class="note">Пример: BTC → USDT. Просто укажите адрес и оплатите. Без паспорта.</p>
-    </div>
+  <header>
+    <nav>
+      <a href="#exchange">Обмен</a>
+      <a href="#faq">FAQ</a>
+      <a href="#support">Поддержка</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>OZARK CRYPTO</h1>
   </div>
+
+  <section class="section" id="exchange">
+    <h2>Быстрый обмен криптовалюты</h2>
+    <p>Покупай Bitcoin, USDT, Ethereum с карты или Apple Pay</p>
+    <iframe 
+      src="https://widget.onramper.com?apiKey=demo-api-key&defaultCrypto=USDT&isFeeIncluded=true"
+      allow="accelerometer; autoplay; camera; gyroscope; payment">
+    </iframe>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>Часто задаваемые вопросы</h2>
+    <p><strong>Нужен ли паспорт?</strong><br> До $1000 — не нужен</p>
+    <p><strong>Сколько занимает?</strong><br> 2-10 минут в среднем</p>
+    <p><strong>Какие способы оплаты?</strong><br> Банковская карта, Google Pay, Apple Pay</p>
+  </section>
+
+  <section class="section" id="support">
+    <h2>Поддержка</h2>
+    <p>Напиши нам в <a href="https://t.me/ozark_support" style="color:#00eaff;">Telegram</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 OzarkCrypto. Все права защищены.
+  </footer>
 </body>
 </html>
